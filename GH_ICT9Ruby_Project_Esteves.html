@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ICT Mathematical Conversions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Free-Google-Slides-Math-Background.jpg); background-size: revert; background-attachment: fixed; background-size: cover; background-repeat: no-repeat;">
+  <br><br><br>
+  <div class="row">
+    <div class="col-xl-2"></div>
+    <div class="col-xl-8">
+    <br><br>
+    <table class="table" >
+        <br><br>
+        <tr><td class="text-light" style="text-align: center;"> <h1>Length Conversion Calculator</h1> </td></tr> 
+        <tr><td style="height: 5%;"></td></tr>
+    </table>    
+    <center> 
+    <table class="table table-sm table-borderless">
+      <tr>
+        <th class="text-light" style="text-align: center;"><h4>Enter value in millimeter:</h4></th>
+        <th></th>
+        <th class="text-light" style="text-align: center;"><h4>The converted value is:</h4></th>
+      </tr>
+      <tr>
+        <th style="text-align: center;"><input id="num_in" class="form-control " style="text-align:center;"></th>
+        <th class="text-light" style="text-align: center;"><h3>=</h3></th>
+        <th style="text-align: center;"><input id="num_out" class="form-control " style="text-align:center;"></th>
+      </tr>
+      <tr>
+        <td style="width: 25%;">
+          <button class="btn btn-dark btn-block" type="button" onclick="convert_cm()">Convert to centimeters</button>
+        </td>
+        <td style="width: 25%;">
+          <button class="btn btn-dark btn-block" type="button" onclick="convert_m()">Convert to meters</button>
+        </td>
+        <td style="width: 25%;">
+          <button class="btn btn-dark btn-block" type="button" onclick="convert_km()">Convert to kilometers</button>
+        </td>
+      </tr>
+     </table>
+     
+     <script>
+      function convert_cm() {
+        let input = document.getElementById("num_in").value;
+        let output;
+        if (isNaN(input)) {
+          output = "Input not valid! Enter a number.";
+        } 
+        else {
+          output = input/10;
+        }
+        document.getElementById("num_out").value = output;
+      }
+
+      function convert_m() {
+        let input = document.getElementById("num_in").value;
+        let output;
+        if (isNaN(input)) {
+          output = "Input not valid! Enter a number.";
+        } else {
+          output = input/1000 ;
+        }
+        document.getElementById("num_out").value = output;
+      }
+
+      function convert_km() {
+        let input = document.getElementById("num_in").value;
+        let output;
+        if (isNaN(input)) {
+          output = "Input not valid! Enter a number.";
+        } else {
+          output = input/1000000 ;
+        }
+        document.getElementById("num_out").value = output;
+      }
+      </script>
+    </center>
+  </div>
+  <div class="col-xl-2"></div>
+  <br><br>
+  
+  <div class="container-fluid bg-dark">
+  
+      
+  </div>
+
+</body>
+</html>
